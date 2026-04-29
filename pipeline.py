@@ -5,6 +5,7 @@ from sklearn.impute import SimpleImputer
 # STEP 1: Load dataset
 print("Loading dataset...")
 data = pd.read_csv("data.csv")
+data = data.drop(['Name', 'Ticket', 'Cabin'], axis=1)
 
 print("First 5 rows of data:")
 print(data.head())
